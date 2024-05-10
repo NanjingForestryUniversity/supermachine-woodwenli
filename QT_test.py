@@ -94,7 +94,7 @@ def main():              # 在一个端口上接收文件，在另一个端口�
         cmd = input().strip().upper()
         if cmd == 'IM':
             # img = cv2.imread(r"/Users/zhouchao/Library/CloudStorage/OneDrive-macrosolid/PycharmProjects/wood_color/data/data20220919/dark/rgb60.png")
-            img = cv2.imread(r"D:\Projects\PycharmProjects\xiangmu_wenli\data\wenli\Huawen\huaweisecha (132).png")   # 读取图片，返回的img对象是一个NumPy数组，包含图像的像素数据。
+            img = cv2.imread(r"D:\Projects\PycharmProjects\supermachine-woodwenli\data\wenli\Huawen\huaweisecha (132).png")   # 读取图片，返回的img对象是一个NumPy数组，包含图像的像素数据。
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)               # 将BGR格式的图像转换为RGB格式
             img = np.asarray(img, dtype=np.uint8)                    # 通过np.asarray()确保图像数据是NumPy数组格式，dtype=np.uint8表示使用8位无符号整数格式存储每个颜色通道，这是图像处理中常用的数据类型。
             height = img.shape[0]                                     # 获取图像的高度
@@ -119,7 +119,7 @@ def main():              # 在一个端口上接收文件，在另一个端口�
             #     print('指令执行失败')
         elif cmd == 'TR':
             # model = "/Users/zhouchao/Library/CloudStorage/OneDrive-macrosolid/PycharmProjects/wood_color/data/data20220919"
-            model = r"D:\Projects\PycharmProjects\xiangmu_wenli_2\data\xiangmu_photos_wenli"   # 数据路径
+            model = r"D:\Projects\PycharmProjects\supermachine-woodwenli\data\xiangmu_photos_wenli"   # 数据路径
             model = model.encode('ascii')           # 将字符串转换为字节流
             length = len(model) + 4                # 计算报文长度  + 4：这个加法操作通常包括额外的协议或消息格式所需的字节长度，特别是：4 字节用于存储整个消息长度的数值本身，表示消息的起始部分。
             length = length.to_bytes(4, byteorder='big')    # 将报文长度转换为4字节的大端字节序
@@ -139,7 +139,7 @@ def main():              # 在一个端口上接收文件，在另一个端口�
         elif cmd == 'MD':
             # model = "/Users/zhouchao/Library/CloudStorage/OneDrive-macrosolid/PycharmProjects/wood_color/models/model_2020-11-08_20-49.p"
             # model = r"C:\Users\FEIJINTI\OneDrive\PycharmProjects\wood_color\models\model_2023-03-27_16-32.p"
-            model = r"D:\Projects\PycharmProjects\xiangmu_wenli_2\models\model_2024-05-07_13-58.p"  # 模型路径
+            model = r"D:\Projects\PycharmProjects\supermachine-woodwenli\models\model_2024-05-10_19-20.p"  # 模型路径
             model = model.encode('ascii')    # 将字符串转换为字节流
             length = len(model) + 4
             length = length.to_bytes(4, byteorder='big')

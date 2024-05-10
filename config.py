@@ -18,7 +18,7 @@ class Config(object):
         if os.path.exists(Config.model_path):
             self._read()                        # 如果 config.json 文件存在，调用 _read 方法
         else:
-            self.model_path = str(ROOT_DIR / 'models/model_2024-04-18_10-16.p')   # 模型路径
+            self.model_path = str(ROOT_DIR / 'models/model_2024-05-10_19-20.p')   # 模型路径
             self.data_path = str(ROOT_DIR / 'data/xiangmu_photos_wenli')                # 数据路径
             self.database_addr = str("mysql+pymysql://root:@localhost:3306/orm_test")  # 测试用数据库地址
             self._param_dict['model_path'] = self.model_path           # 将模型路径写入 _param_dict 属性中
